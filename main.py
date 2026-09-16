@@ -55,8 +55,8 @@ bj_now = now.hour + 8  # 简单处理，日期跨天可忽略
 # 更稳妥的写法：
 from datetime import timedelta, timezone
 bj_time = datetime.now(timezone.utc) + timedelta(hours=8)
-start = bj_time.replace(hour=22, minute=0, second=0, microsecond=0)
-end   = bj_time.replace(hour=22, minute=15, second=0, microsecond=0)
+start = bj_time.replace(hour=21, minute=30, second=0, microsecond=0)
+end   = bj_time.replace(hour=22, minute=30, second=0, microsecond=0)
 
 if start <= bj_time <= end:
     response = sc_send(send_key, "工学云未签到", desp)
