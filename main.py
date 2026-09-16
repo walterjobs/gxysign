@@ -7,6 +7,7 @@ from serverchan_sdk import sc_send
 # ====== 从环境变量读取（GitHub Secrets）======
 auth = os.environ["MOGUDING_AUTH"]
 send_key = os.environ["SERVERCHAN_KEY"]
+planid = os.environ["PLANID"]
 
 list_url = "https://api.moguding.net:9000/attendence/clock/v2/listByApp"
 sign_url = "https://api.moguding.net:9000/msg/notice/v1/batchSignMessage"
@@ -20,7 +21,7 @@ headers = {
 
 # ====== 1. 获取未签到列表 ======
 param1 = {
-    "planId": "f39370a1c4480e74605af1e4910a37d9",
+    "planId": planid,
     "state": 0,
     "type": 1,
 }
