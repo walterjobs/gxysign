@@ -2,9 +2,7 @@ name: Daily Check-in
 
 on:
   schedule:
-    # 北京时间 22:00 = UTC 14:00
-    # GitHub 的 cron 可能会延迟几分钟，所以 14:00 开始，每 5 分钟跑一次，覆盖 22:00-22:15
-    - cron: '0 4,10,14 * * *'   # 北京时间 12:00、18:00、22:00
+    - cron: '50 3,9,13 * * *'
   workflow_dispatch:   # 支持手动触发测试
 
 jobs:
