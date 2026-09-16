@@ -40,11 +40,12 @@ stu_name_list = [
 ]
 
 desp = "\n".join(stu_name_list) + "\n未签到" if stu_name_list else "全部已签到 ✅"
-
+print (desp)
 # ====== 2. 签到（无论何时都执行） ======
 for user_id in user_id_list:
     param2 = {"type": 1, "tolds": user_id}
-    requests.post(sign_url, headers=headers, json=param2)
+    toldsign = requests.post(sign_url, headers=headers, json=param2)
+    print(toldsign.text)
 
 # ====== 3. 推送：只在 22:00 - 22:15（北京时间）之间执行 ======
 # GitHub Actions 用 UTC，+8 小时得到北京时间
