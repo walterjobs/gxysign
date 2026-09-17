@@ -60,7 +60,7 @@ start = bj_time.replace(hour=21, minute=30, second=0, microsecond=0)
 end   = bj_time.replace(hour=22, minute=30, second=0, microsecond=0)
 
 if start <= bj_time <= end:
-    response = sc_send(send_key, "工学云未签到", desp)
+    response = sc_send(send_key, desp)
     print("已推送：\n", desp)
 else:
     print(f"当前北京时间 {bj_time.strftime('%H:%M:%S')} 不在 22:00-22:15 范围内，跳过推送。")
