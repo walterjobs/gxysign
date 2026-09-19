@@ -16,8 +16,8 @@
 
 | Secret 名称 | 必填 | 说明 |
 |---|---|---|
-| `MOGUDING_AUTH` | ✅ | 默钉请求头里的 `authorization` 值 |
-| `PLANID` | ✅ | 打卡计划 ID |
+| `MOGUDING_AUTH` | ✅ | 请求头里的 `authorization` 值 |
+| `PLANID` | ✅ | 请求头里的实习计划 PLANID |
 | `BARK_KEY` | ✅ | Bark App 里的推送 Key |
 
 #### 如何获取 `MOGUDING_AUTH`
