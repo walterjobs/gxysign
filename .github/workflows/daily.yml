@@ -26,5 +26,6 @@ jobs:
         env:
           MOGUDING_AUTH: ${{ secrets.MOGUDING_AUTH }}
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
           PLANID: ${{ secrets.PLANID }}
         run: python main.py
