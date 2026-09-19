@@ -22,9 +22,10 @@
 
 #### 如何获取 `MOGUDING_AUTH`、`PLANID`
 
-1. 手机或电脑登录工学云，抓包进入 `https://api.moguding.net:9000/attendence/clock/v2/listByApp` 
-2. 复制请求头里的 `authorization` 字段值（一长串 token）
-3. 复制请求头里的 `planId` 字段值
+1. 手机或电脑登录工学云，抓包进入https://student-h5.gongxueyun.com/
+   找到请求 `https://api.moguding.net:9000/attendence/clock/v2/listByApp` 
+3. 复制请求头里的 `authorization` 字段值（一长串 token）
+4. 复制请求头里的 `planId` 字段值
 
 
 #### 如何获取 `BARK_KEY`（当然也可以利用server酱进行微信推送，见项目OLD分支）
