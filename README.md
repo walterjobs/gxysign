@@ -20,16 +20,14 @@
 | `PLANID` | ✅ | 请求头里的实习计划 PLANID |
 | `BARK_KEY` | ✅ | Bark App 里的推送 Key |
 
-#### 如何获取 `MOGUDING_AUTH`
+#### 如何获取 `MOGUDING_AUTH`、`PLANID`
 
-1. 手机或电脑登录默钉，抓包进入 `api.moguding.net` 的任意请求
+1. 手机或电脑登录工学云，抓包进入 `https://api.moguding.net:9000/attendence/clock/v2/listByApp` 
 2. 复制请求头里的 `authorization` 字段值（一长串 token）
+3. 复制请求头里的 `planId` 字段值
 
-#### 如何获取 `PLANID`
 
-打卡计划链接或接口参数里能看到，`planId` 字段的值。
-
-#### 如何获取 `BARK_KEY`
+#### 如何获取 `BARK_KEY`（当然也可以利用server酱进行微信推送，见项目OLD分支）
 
 1. App Store 安装 [Bark](https://apps.apple.com/app/bark-customed-notifications/id1403753865)
 2. 打开 App，首页那串 `https://api.day.app/xxxxxxxx` 里的 `xxxxxxxx` 就是 Key
