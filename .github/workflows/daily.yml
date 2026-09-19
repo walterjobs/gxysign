@@ -2,7 +2,8 @@ name: Daily Check-in
 
 on:
   schedule:
-    - cron: '40 2,9,13 * * *'
+    - cron: '43 11,17,21 * * *'
+      timezone: 'Asia/Shanghai'
   workflow_dispatch:   # 支持手动触发测试
 
 jobs:
