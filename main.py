@@ -59,8 +59,8 @@ bj_now = now.hour + 8  # 简单处理，日期跨天可忽略
 # 更稳妥的写法：
 from datetime import timedelta, timezone
 bj_time = datetime.now(timezone.utc) + timedelta(hours=8)
-start = bj_time.replace(hour=21, minute=30, second=0, microsecond=0)
-end   = bj_time.replace(hour=22, minute=30, second=0, microsecond=0)
+start = bj_time.replace(hour=20, minute=30, second=0, microsecond=0)
+end   = bj_time.replace(hour=23, minute=30, second=0, microsecond=0)
 
 if start <= bj_time <= end:
     response = requests.post(bark_url, timeout=10)
