@@ -46,10 +46,13 @@ print (desp)
 bark_url = f"https://api.day.app/{send_key}/{desp}"
 
 # ====== 2. 签到（无论何时都执行） ======
-for user_id in user_id_list:
-    param2 = {"type": 1, "tolds": user_id}
-    toldsign = requests.post(sign_url, headers=headers, json=param2)
-    print(toldsign.text)
+if stu_name_list
+    for user_id in user_id_list:
+        param2 = {"type": 1, "tolds": user_id}
+        toldsign = requests.post(sign_url, headers=headers, json=param2)
+        print(toldsign.text)
+    else
+    print(全部已签到,无需推送)
 
 # ====== 3. 推送：只在 22:00 - 22:15（北京时间）之间执行 ======
 # GitHub Actions 用 UTC，+8 小时得到北京时间
