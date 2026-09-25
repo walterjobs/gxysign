@@ -51,7 +51,7 @@ if stu_name_list:
         param2 = {"type": 1, "tolds": user_id}
         toldsign = requests.post(sign_url, headers=headers, json=param2)
         print(toldsign.text)
-    else
+else:
     print("无需提醒打卡")
 
 # ====== 3. 推送：只在 22:00 - 22:15（北京时间）之间执行 ======
