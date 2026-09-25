@@ -46,7 +46,7 @@ print (desp)
 bark_url = f"https://api.day.app/{send_key}/{desp}"
 
 # ====== 2. 签到（无论何时都执行） ======
-if stu_name_list
+if stu_name_list:
     for user_id in user_id_list:
         param2 = {"type": 1, "tolds": user_id}
         toldsign = requests.post(sign_url, headers=headers, json=param2)
