@@ -52,7 +52,7 @@ if stu_name_list:
         toldsign = requests.post(sign_url, headers=headers, json=param2)
         print(toldsign.text)
     else
-    print(全部已签到,无需推送)
+    print("无需提醒打卡")
 
 # ====== 3. 推送：只在 22:00 - 22:15（北京时间）之间执行 ======
 # GitHub Actions 用 UTC，+8 小时得到北京时间
