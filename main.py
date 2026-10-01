@@ -15,7 +15,7 @@ headers = {
     "Host": "api.moguding.net:9000",
     "Connection": "keep-alive",
     "Accept": "application/json, text/plain, */*",
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1"
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1",
     "Content-Type": "application/json;charset=UTF-8",
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
     "Origin": "https://student-h5.gongxueyun.com/",  # 假设的 APP 内嵌页面 Origin，需根据实际情况调整
