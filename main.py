@@ -40,7 +40,7 @@ param1 = {
 try:
     resp = requests.post(list_url, headers=headers, json=param1, timeout=15)
     unsign = resp.text
-    print("原始响应:", unsign)
+    # print("原始响应:", unsign)
 except requests.exceptions.RequestException as e:
     desp = "工学云接口访问失败"
     print(f"{desp}: {e}")
