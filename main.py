@@ -12,10 +12,15 @@ list_url = "https://api.moguding.net:9000/attendence/clock/v2/listByApp"
 sign_url = "https://api.moguding.net:9000/msg/notice/v1/batchSignMessage"
 
 headers = {
-    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
-                  "(KHTML, like Gecko) Version/18.5 Safari/605.1.15 Edg/141.0.0.0 ",
-    "Accept": "application/json",
-    "authorization": auth,
+    "Host": "api.moguding.net:9000",
+    "Connection": "keep-alive",
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1"
+    "Content-Type": "application/json;charset=UTF-8",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Origin": "https://student-h5.gongxueyun.com/",  # 假设的 APP 内嵌页面 Origin，需根据实际情况调整
+    "Referer": "https://student-h5.gongxueyun.com/",  # 同上
+    "authorization": auth,  # 你的 token 放在最后或合适位置
 }
 
 bark_base_url = f"https://api.day.app/{send_key}/"
