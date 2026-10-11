@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import time  
 from datetime import datetime, timedelta, timezone
 
 # ====== 从环境变量读取（GitHub Secrets）======
@@ -42,15 +43,25 @@ param1 = {
     "type": 1,
 }
 
-try:
-    resp = requests.post(list_url, headers=headers, json=param1, timeout=15)
-    unsign = resp.text
-    # print("原始响应:", unsign)
-except requests.exceptions.RequestException as e:
-    desp = "工学云接口访问失败"
-    print(f"{desp}: {e}")
-    push_bark(desp)
-    raise SystemExit(0)
+max_retries = 3  # 总共尝试 3 次（1 次 + 2 次重试）
+unsign = None
+for attempt in range(1, max_retries + 1):
+    try:
+        resp = requests.post(list_url, headers=headers, json=param1, timeout=15)
+        resp.raise_for_status()  # 可选，如果需要的话
+        unsign = resp.text
+        # print("原始响应:", unsign)
+        break  # 成功就跳出循环
+    except requests.exceptions.RequestException as e:
+        print(f"第 {attempt} 次请求失败: {e}")
+        if attempt < max_retries:
+            time.sleep(2)  # 等待 2 秒后重试
+            continue
+        else:
+            desp = "工学云接口访问失败"
+            print(f"{desp}: {e}")
+            push_bark(desp)
+            raise SystemExit(0)
 
 # ====== 解析 JSON ======
 try:
