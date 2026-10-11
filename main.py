@@ -48,7 +48,7 @@ unsign = None
 for attempt in range(1, max_retries + 1):
     try:
         resp = requests.post(list_url, headers=headers, json=param1, timeout=15)
-        resp.raise_for_status()  # 可选，如果需要的话
+        # resp.raise_for_status()  # 可选，如果需要的话
         unsign = resp.text
         # print("原始响应:", unsign)
         break  # 成功就跳出循环
